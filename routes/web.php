@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('notas', function () {
+    return 'Aquí estará nuestro listado de notas';
+});
+
+Route::get('notas/crear', function () {
+    return 'Aquí podremos ver el formulario para crear notas';
 });
