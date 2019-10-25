@@ -15,6 +15,14 @@ Route::get('notas', function () {
     return 'Aquí estará nuestro listado de notas';
 });
 
+Route::get('notas/{id}', function ($id) {
+    return 'Aquí veremos el detalle de la nota: '.$id;
+});
+
 Route::get('notas/crear', function () {
     return 'Aquí podremos ver el formulario para crear notas';
+});
+
+Route::get('notas/{id}/editar', function ($id) {
+    return 'Aquí podremos editar la nota: '.$id;
 });
