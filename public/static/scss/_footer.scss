@@ -1,0 +1,27 @@
+.foot {
+    text-align: center;
+
+    .ad {
+        background-color: lighten($mirage, 10%);
+        color: $white;
+    }
+
+    .license {
+        background-color: $mirage;
+        color: $light_gray;
+    }
+
+    a {
+        color: $yellow;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 0;
+        padding: 16px;
+    }
+}

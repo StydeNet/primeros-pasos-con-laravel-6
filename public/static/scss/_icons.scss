@@ -1,0 +1,59 @@
+.icon {
+    display: inline-block;
+    background-size: cover;
+}
+
+.icon-pen {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m290.74 93.24 128.02 128.02-277.99 277.99-114.14 12.6c-15.28 1.69-28.19-11.23-26.49-26.51l12.7-114.22zm207.2-19.06-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z'/%3E%3C/svg%3E");
+}
+
+.icon-th-list {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class='main-nav-icon'%3E%3Cpath d='M149.333 216v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-80c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zM125.333 32H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zm80 448H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm-24-424v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24zm24 264H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24z'/%3E%3C/svg%3E");
+}
+
+.icon-trash {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z'/%3E%3C/svg%3E");
+}
+
+.main-nav-link .icon {
+    position: relative;
+    top: 1px;
+    width: 14px;
+    height: 14px;
+    filter: invert(1);
+}
+
+.action-link {
+    display: inline-block;
+    padding: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover {
+        filter: brightness(130%);
+    }
+}
+
+.action-edit {
+    border: 1px solid $green;
+
+    .icon {
+        filter: invert(24%) sepia(12%) saturate(6113%) hue-rotate(146deg) brightness(94%) contrast(95%)
+    }
+}
+
+.action-delete {
+    border: 1px solid $red;
+
+    .icon {
+        filter: invert(16%) sepia(84%) saturate(2940%) hue-rotate(349deg) brightness(88%) contrast(110%);
+    }
+}
