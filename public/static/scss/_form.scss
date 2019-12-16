@@ -8,7 +8,7 @@
 .field-input, .field-textarea {
     box-sizing: border-box;
     margin-bottom: 24px;
-    padding: 0.75em;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     border: 1px solid $gray;
     border-radius: 4px;
@@ -19,6 +19,7 @@
 
 .field-textarea {
     resize: vertical;
+    padding: 0.75rem;
 }
 
 .field-input:focus, .field-textarea:focus {
@@ -29,10 +30,10 @@
 
 .btn {
     margin-top: 8px;
-    padding: 0.75em;
+    padding: 0.75rem;
     font-size: 16px;
     font-family: $body_font;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -42,14 +43,14 @@
     background: $green;
 
     &:hover {
-        border: 1px solid $green;
-        color: $green;
-        background: $white;
-    }
-
-    &:active {
         color: $white;
         border: 1px solid lighten($green, 10%);
         background: lighten($green, 10%);
+    }
+
+    &:active {
+        color: $green;
+        border: 1px solid lighten($green, 35%);
+        background: lighten($green, 35%);
     }
 }
