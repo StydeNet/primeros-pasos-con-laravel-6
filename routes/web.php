@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('notas', function () {
-    return 'Aquí estará nuestro listado de notas';
+Route::get('/', function () {
+    return view('notes');
 });
 
 Route::get('notas/{id}', function ($id) {
@@ -20,7 +20,7 @@ Route::get('notas/{id}', function ($id) {
 });
 
 Route::get('notas/crear', function () {
-    return 'Aquí podremos ver el formulario para crear notas';
+    return view('add-note');
 });
 
 Route::get('notas/{id}/editar', function ($id) {
