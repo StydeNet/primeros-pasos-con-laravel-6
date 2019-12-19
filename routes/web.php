@@ -13,10 +13,10 @@
 
 Route::get('/', function () {
     $notes = [
-//        'Mi primera nota',
-//        'Mi segunda nota',
-//        'Mi tercera nota',
-//        'Mi cuarta nota',
+        'Mi primera nota',
+        'Mi segunda nota',
+        'Mi tercera nota',
+        'Mi cuarta nota',
     ];
 
     return view('notes', ['notes' => $notes]);
