@@ -9,18 +9,18 @@
 <body>
     <div class="wrap">
         <header class="head">
-            <a href="#" class="logo"></a>
+            <a href="{{ url('/') }}" class="logo"></a>
 
             <nav class="main-nav">
                 <ul class="main-nav-list">
-                    <li class="main-nav-item active">
-                        <a href="/static/notes.html" class="main-nav-link">
+                    <li class="main-nav-item {{ url()->current() == route('notes') ? 'active' : '' }}">
+                        <a href="{{ route('notes') }}" class="main-nav-link">
                             <i class="icon icon-th-list"></i>
                             <span>Ver notas</span>
                         </a>
                     </li>
-                    <li class="main-nav-item">
-                        <a href="/static/add-note.html" class="main-nav-link">
+                    <li class="main-nav-item {{ url()->current() == route('notes.create') ? 'active' : '' }}">
+                        <a href="{{ route('notes.create') }}" class="main-nav-link">
                             <i class="icon icon-pen"></i>
                             <span>Nueva nota</span>
                         </a>
