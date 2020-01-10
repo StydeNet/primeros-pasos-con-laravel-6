@@ -1,0 +1,20 @@
+<p>
+    Recuerda que si retornas un arreglo en una ruta, Laravel lo va a convertir en JSON automáticamente:
+</p>
+
+<pre>
+&lt;?php
+
+Route::get('/', function () {
+    return [
+        'Cursos' => [
+            'Primeros pasos con Laravel',
+            'Crea un panel de control con Laravel',
+        ]
+    ];
+});
+</pre>
+
+<p>Producirá el siguiente resultado:</p>
+
+<code>{"Cursos":["Primeros pasos con Laravel","Crea un panel de control con Laravel"]}</code>

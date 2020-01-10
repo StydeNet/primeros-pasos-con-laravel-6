@@ -1,0 +1,9 @@
+<p>
+    Puedes colocar el siguiente código en el método <code>boot</code>
+    de <code>app/Providers/RouteServiceProvider.php</code>
+    para restringir cualquier parámetro de las rutas a un formato numérico:
+</p>
+
+<pre>Route::pattern('nombre-del-parametro', '\d+');</pre>
+
+<p>Puedes por supuesto usar otras expresiones regulares para restringir a otros formatos.</p>
