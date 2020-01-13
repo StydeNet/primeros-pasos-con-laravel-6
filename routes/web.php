@@ -11,13 +11,10 @@
 |
 */
 
+use Illuminate\Support\Facades\DB;
+
 Route::get('/', function () {
-    $notes = [
-        'Mi primera nota',
-        'Mi segunda nota',
-        'Mi tercera nota',
-        'Mi cuarta nota',
-    ];
+    $notes = DB::table('notes')->get();
 
     return view('notes', ['notes' => $notes]);
 })->name('notes');
@@ -31,5 +28,11 @@ Route::get('notas/crear', function () {
 })->name('notes.create');
 
 Route::get('notas/{id}/editar', function ($id) {
+    $note = DB::table('notes')
+        ->where('id', $id)
+        ->first();
+
+    return ['note' => $note];
+
     return 'Aquí podremos editar la nota: '.$id;
 })->name('notes.edit');
