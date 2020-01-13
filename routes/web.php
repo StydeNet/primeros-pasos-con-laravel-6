@@ -11,10 +11,10 @@
 |
 */
 
-use Illuminate\Support\Facades\DB;
+use App\Note;
 
 Route::get('/', function () {
-    $notes = DB::table('notes')->get();
+    $notes = Note::all();
 
     return view('notes', ['notes' => $notes]);
 })->name('notes');
@@ -28,11 +28,7 @@ Route::get('notas/crear', function () {
 })->name('notes.create');
 
 Route::get('notas/{id}/editar', function ($id) {
-    $note = DB::table('notes')
-        ->where('id', $id)
-        ->first();
+    $note = Note::find($id);
 
     return ['note' => $note];
-
-    return 'Aquí podremos editar la nota: '.$id;
 })->name('notes.edit');
