@@ -1,0 +1,24 @@
+.field-error {
+    margin-bottom: 12px;
+    border: 1px solid $red;
+    box-shadow: 0 2px 4px -2px darken($red, 10%);
+}
+
+.error-message {
+    margin: 0 24px 0;
+    color: $red;
+    font-style: italic;
+}
+
+.errors {
+    margin-bottom: 24px;
+    padding: 16px;
+    border: 1px solid $red;
+    background-color: lighten($red, 60%);
+    border-radius: 4px;
+    color: $red;
+
+    li {
+        margin-bottom: 6px;
+    }
+}
