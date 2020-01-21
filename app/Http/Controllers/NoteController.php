@@ -39,6 +39,6 @@ class NoteController
     {
         $note = Note::find($id);
 
-        return ['note' => $note];
+        return view('edit-note', ['note' => $note]);
     }
 }
