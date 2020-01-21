@@ -11,12 +11,7 @@
 |
 */
 
-use App\Http\Controllers\NoteController;
-use App\Note;
-use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-
-Route::get('/', [NoteController::class, 'index'])->name('notes');
+Route::get('/', 'NoteController@index')->name('notes');
 
 Route::get('notas/{id}', function ($id) {
     return 'Aquí veremos el detalle de la nota: '.$id;
