@@ -20,6 +20,7 @@ class CreateNotesTable extends Migration
             $table->mediumText('content');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

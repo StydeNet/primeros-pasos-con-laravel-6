@@ -13,6 +13,13 @@
                         <p>
                             {!! $note->content !!} {{-- @todo: Purify HTML or use Markdown instead! --}}
                         </p>
+
+                        <form method="POST" action="{{ url("notas/{$note->id}") }}">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit">Eliminar</button>
+                        </form>
                     </div>
 
                     <footer class="card-footer">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Note;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class NoteController
@@ -50,6 +51,15 @@ class NoteController
         ]);
 
         $note->update($data);
+
+        return redirect('/');
+    }
+
+    public function destroy($id)
+    {
+        $note = Note::find($id);
+
+        $note->delete();
 
         return redirect('/');
     }
